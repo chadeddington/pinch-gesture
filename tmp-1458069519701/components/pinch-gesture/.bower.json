@@ -1,0 +1,37 @@
+{
+  "name": "pinch-gesture",
+  "authors": [
+    "Chad Eddington"
+  ],
+  "description": "An element providing listeners for simple pinch gestures.",
+  "keywords": [
+    "web-component",
+    "polymer",
+    "pinch",
+    "gesture"
+  ],
+  "main": "pinch-gesture.html",
+  "license": "http://polymer.github.io/LICENSE.txt",
+  "homepage": "https://github.com/chadeddington/seed-element/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "web-component-tester": "*"
+  },
+  "_release": "f3b5e59eb7",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "f3b5e59eb7c24ae5929f62e13aa9acfb9e069a49"
+  },
+  "_source": "git://github.com/chadeddington/pinch-gesture.git",
+  "_target": "master",
+  "_originalSource": "chadeddington/pinch-gesture",
+  "_direct": true
+}
