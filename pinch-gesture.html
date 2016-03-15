@@ -14,7 +14,9 @@ An element providing a solution to no problem in particular.
 
 Example:
 
-    <pinch-gesture></pinch-gesture>
+    <pinch-gesture>
+      [your element you want to pinch to zoom]
+    </pinch-gesture>
 
 @group Seed Elements
 @element pinch-gesture
@@ -82,7 +84,6 @@ Example:
       // Use this to clean up anything you did in `attached`.
     },
 
-    // Element Behavior
     calcChord: function(touches) {
       var pointers = [];
         for (var i = 0; i < touches.length; i++){
