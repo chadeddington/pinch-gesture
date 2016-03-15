@@ -2,7 +2,7 @@
 
 An element built with Polymer 1.0 that creates events for pinch zooming.
 
-**Demo** available at [here](http://chadeddington.github.io/pinch-gesture/sample/)
+**Demo** available [here](http://chadeddington.github.io/pinch-gesture/sample/)
 
 
 
