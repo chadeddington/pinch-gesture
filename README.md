@@ -1,8 +1,9 @@
 # pinch-gesture
 
-An element providing listeners for simple pinch gestures.
+An element built with Polymer 1.0 that creates events for pinch zooming.
 
 **Demo** available at [here](http://chadeddington.github.io/pinch-gesture/demo/)
+
 
 
 ## Dependencies

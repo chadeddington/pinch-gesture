@@ -4,12 +4,13 @@
   "authors": [
     "Chad Eddington"
   ],
-  "description": "An element providing listeners for simple pinch gestures.",
+  "description": "An element built with Polymer 1.0 that creates events for pinch zooming.",
   "keywords": [
     "web-component",
     "polymer",
     "pinch",
-    "gesture"
+    "gesture",
+    "zoom"
   ],
   "main": "pinch-gesture.html",
   "license": "http://polymer.github.io/LICENSE.txt",
