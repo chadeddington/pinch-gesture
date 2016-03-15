@@ -2,7 +2,7 @@
 
 An element providing listeners for simple pinch gestures.
 
-**Demo** available at [http://chadeddington.github.io/pinch-gesture/demo/]
+**Demo** available at [here](http://chadeddington.github.io/pinch-gesture/demo/)
 
 
 ## Dependencies
