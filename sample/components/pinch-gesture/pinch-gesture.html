@@ -14,7 +14,9 @@ An element providing a solution to no problem in particular.
 
 Example:
 
-    <pinch-gesture></pinch-gesture>
+    <pinch-gesture>
+      [your element you want to pinch to zoom]
+    </pinch-gesture>
 
 @group Seed Elements
 @element pinch-gesture
@@ -81,9 +83,7 @@ Example:
       //
       // Use this to clean up anything you did in `attached`.
     },
-
-    // Element Behavior
-    calcChord: function(touches) {
+    _calcChord: function(touches) {
       var pointers = [];
         for (var i = 0; i < touches.length; i++){
           pointers.push(touches[i]);
@@ -113,7 +113,7 @@ Example:
     _startPinch: function(e) {
       if (e.touches.length > 1) { 
         e.preventDefault();
-        var points = this.calcChord(e.touches);
+        var points = this._calcChord(e.touches);
         this.zoom = points.diameter;
         this.centerX = points.center.x;
         this.centerY = points.center.y;
@@ -123,7 +123,7 @@ Example:
     _pinching: function(e) {
       if (e.touches.length > 1) {
         e.preventDefault();
-        var points = this.calcChord(e.touches);
+        var points = this._calcChord(e.touches);
         this.zoom = points.diameter;
         this.centerX = points.center.x;
         this.centerY = points.center.y;
@@ -133,7 +133,7 @@ Example:
     _stopPinch: function(e) {
       if (e.changedTouches.length > 1) {
         e.preventDefault();
-        var points = this.calcChord(e.changedTouches);
+        var points = this._calcChord(e.changedTouches);
         this.zoom = points.diameter;
         this.centerX = points.center.x;
         this.centerY = points.center.y;
