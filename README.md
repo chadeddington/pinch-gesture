@@ -1,7 +1,8 @@
 # pinch-gesture
 
 An element providing listeners for simple pinch gestures.
-**Demo** available at [chadeddington.github.io/pinch-gesture/demo/]
+
+**Demo** available at [http://chadeddington.github.io/pinch-gesture/demo/]
 
 
 ## Dependencies
