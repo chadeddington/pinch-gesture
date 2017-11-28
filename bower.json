@@ -1,10 +1,10 @@
 {
   "name": "pinch-gesture",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "authors": [
     "Chad Eddington"
   ],
-  "description": "An element built with Polymer 1.0 that creates events for pinch zooming.",
+  "description": "An element built with Polymer that creates events for pinch zooming.",
   "keywords": [
     "web-component",
     "polymer",
@@ -13,17 +13,16 @@
     "zoom"
   ],
   "main": "pinch-gesture.html",
-  "license": "http://polymer.github.io/LICENSE.txt",
   "homepage": "https://github.com/chadeddington/seed-element/",
   "ignore": [
     "/.*",
     "/test/"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.1.0"
+    "polymer": "Polymer/polymer#1 - 2"
   },
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
-    "web-component-tester": "*"
+    "iron-component-page": "PolymerElements/iron-component-page#2.x",
+    "web-component-tester": "6.x"
   }
 }

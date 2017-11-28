@@ -26,8 +26,8 @@ Example:
 <dom-module id="pinch-gesture">
 
   <template>
-    <content></content>
-    
+    <slot></slot>
+
   </template>
 
 </dom-module>
@@ -109,10 +109,10 @@ Example:
         y = Math.abs(points.a.clientY + points.b.clientY) / 2;
         points.center = { x: x, y: y };
         points.diameter = dist;
-        return points; 
+        return points;
     },
     _startPinch: function(e) {
-      if (e.touches.length > 1) { 
+      if (e.touches.length > 1) {
         e.preventDefault();
         var points = this.calcChord(e.touches);
         this.zoom = points.diameter;
