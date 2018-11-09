@@ -13,44 +13,45 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <script src="../../web-component-tester/browser.js"></script>
+    <script src="../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script src="../../wct-browser-legacy/browser.js"></script>
 
     <!-- Step 1: import the element to test -->
-    <link rel="import" href="../pinch-gesture.html">
+    <script type="module" src="../pinch-gesture.js"></script>
   </head>
   <body>
 
     <!-- You can use the document as a place to set up your fixtures. -->
     <pinch-gesture></pinch-gesture>
 
-    <script>
-      var myEl = document.querySelector('pinch-gesture');
+    <script type="module">
+import '../pinch-gesture.js';
+var myEl = document.querySelector('pinch-gesture');
 
-      suite('<pinch-gesture>', function() {
+suite('<pinch-gesture>', function() {
 
-        test('defines the "author" property', function() {
-          assert.equal(myEl.author.name, 'Dimitri Glazkov');
-          assert.equal(myEl.author.image, 'http://addyosmani.com/blog/wp-content/uploads/2013/04/unicorn.jpg');
-        });
+  test('defines the "author" property', function() {
+    assert.equal(myEl.author.name, 'Dimitri Glazkov');
+    assert.equal(myEl.author.image, 'http://addyosmani.com/blog/wp-content/uploads/2013/04/unicorn.jpg');
+  });
 
-        test('says hello', function() {
-          assert.equal(myEl.sayHello(), 'pinch-gesture says, Hello World!');
+  test('says hello', function() {
+    assert.equal(myEl.sayHello(), 'pinch-gesture says, Hello World!');
 
-          var greetings = myEl.sayHello('greetings Earthlings');
-          assert.equal(greetings, 'pinch-gesture says, greetings Earthlings');
-        });
+    var greetings = myEl.sayHello('greetings Earthlings');
+    assert.equal(greetings, 'pinch-gesture says, greetings Earthlings');
+  });
 
-        test('fires lasers', function(done) {
-          myEl.addEventListener('pinch-gesture-lasers', function(event) {
-            assert.equal(event.detail.sound, 'Pew pew!');
-            done();
-          });
-          myEl.fireLasers();
-        });
+  test('fires lasers', function(done) {
+    myEl.addEventListener('pinch-gesture-lasers', function(event) {
+      assert.equal(event.detail.sound, 'Pew pew!');
+      done();
+    });
+    myEl.fireLasers();
+  });
 
-      });
-    </script>
+});
+</script>
 
   </body>
 </html>

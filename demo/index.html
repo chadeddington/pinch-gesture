@@ -13,8 +13,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <title>pinch-gesture Demo</title>
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <link rel="import" href="../pinch-gesture.html">
+    <script src="../../@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+    <script type="module" src="../pinch-gesture.js"></script>
     <style>
       .block {
         width: 100%;
@@ -35,14 +35,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </pinch-gesture>
 
   </body>
-  <script>
-    (function() {
-      window.addEventListener('pinch-moving', function(e) {
-        var li = document.createElement('LI');
-        var zoom = document.createTextNode(e.detail.zoom);
-        li.appendChild(zoom);
-        document.querySelector('#output').appendChild(li);
-      })
-    })()
-  </script>
+  <script type="module">
+import '../pinch-gesture.js';
+window.addEventListener('pinch-moving', function(e) {
+  var li = document.createElement('LI');
+  var zoom = document.createTextNode(e.detail.zoom);
+  li.appendChild(zoom);
+  document.querySelector('#output').appendChild(li);
+})
+</script>
 </html>
